@@ -1,0 +1,24 @@
+package sday2;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.FindBy;
+
+public class Automation {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.Chrome.driver","C:\\Users\\Sunil\\eclipse-workspace\\training\\src\\test\\resources\\chromedriver.exe");
+         WebDriver driver=new ChromeDriver();
+         driver.get("https://www.saucedemo.com/");
+         WebElement username=driver.findElement(By.cssSelector("input[id=user-name]"));
+         WebElement password=driver.findElement(By.cssSelector("input[name=password]"));
+         WebElement login=driver.findElement(By.cssSelector("input[id=login-button]"));
+         username.sendKeys("standard_user");
+         password.sendKeys("secret_sauce");
+         login.click();
+         
+	}
+
+}

@@ -1,0 +1,40 @@
+package sday4;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+
+public class selectors {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Sunil\\eclipse-workspace\\training\\src\\test\\resources\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://www.saucedemo.com/");
+		WebElement username=driver.findElement(By.cssSelector("input[id=\"user-name\"]"));
+		WebElement password=driver.findElement(By.cssSelector("input[type=\"password\"]"));
+		WebElement login=driver.findElement(By.cssSelector("input[name=\"login-button\"]"));
+		username.sendKeys("standard_user");
+		password.sendKeys("secret_sauce");
+		login.click();
+		WebElement fliter=driver.findElement(By.cssSelector("select[class=\"product_sort_container\"]"));
+		fliter.click();
+		Select s=new Select(fliter);
+		List<WebElement> p=s.getOptions();
+		for(WebElement w:p)
+			
+		{
+			System.out.println(w.getText());
+		}
+	s.selectByIndex(1);
+		{
+			
+		}
+		}
+
+}

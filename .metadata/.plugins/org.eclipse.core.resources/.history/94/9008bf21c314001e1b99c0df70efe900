@@ -1,0 +1,24 @@
+package day10;
+
+public class Stringmanupulation {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+String s="hi how are you";
+String s1="hello how are you";
+ int a= s.length();
+System.out.println(a);
+//index srts from 0
+int b=s.indexOf("h");
+System.out.println(b);
+//String c= s. replaceAll("h","s");
+String c= s. substring(5,6);
+
+
+System.out.println(c);
+	
+	}
+
+	
+	}
+	

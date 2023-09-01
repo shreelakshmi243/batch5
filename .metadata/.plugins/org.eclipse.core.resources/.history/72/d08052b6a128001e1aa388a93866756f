@@ -1,0 +1,25 @@
+package sday1;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Basetest1 {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Sunil\\eclipse-workspace\\training\\src\\test\\resources\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://www.facebook.com/login/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjkwMDM2MTkzLCJjYWxsc2l0ZV9pZCI6MjY5NTQ4NDUzMDcyMDk1MX0%3D");
+		driver.manage().window().maximize();
+		String username="8310600445";
+		String password="daddyvj";
+		WebElement un=driver.findElement(By.id("email"));
+		WebElement pwd=driver.findElement(By.id("pass"));
+		WebElement login=driver.findElement(By.name("login"));
+		un.sendKeys(username);
+		pwd.sendKeys(password);
+		login.click();
+		}
+
+}

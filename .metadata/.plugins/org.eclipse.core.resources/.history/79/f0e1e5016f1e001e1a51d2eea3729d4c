@@ -1,0 +1,11 @@
+package allconceptsofoops;
+
+public class abcdsds {
+
+	public static void main(String[] args) {
+		abstraction ab=new abstraction();
+		ab.timing();
+
+	}
+
+}

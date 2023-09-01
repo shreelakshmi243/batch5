@@ -1,0 +1,12 @@
+package sday2;
+
+import org.openqa.selenium.WebDriver;
+
+public class Automation {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.Chrome.driver","C:\\Users\\Sunil\\eclipse-workspace\\training\\src\\test\\resources\\chromedriver.exe");
+         WebDriver
+	}
+
+}
